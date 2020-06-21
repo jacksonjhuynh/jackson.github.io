@@ -26,7 +26,7 @@
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="1.html">Lunar Sampling Device</a></li>
-                            <li><a href="2.html">Formula SAE</a></li>								
+                            <li><a href="2.html">Design Work</a></li>								
                             <li>
                                 <a>Projects</a>
                                 <ul>
@@ -36,15 +36,15 @@
 									<li><a href="6.html">Laminar Flow Analyses</a></li>
 									<li><a href="7.html">Bike Crank Analysis</a></li>
                                     <!-- <li>
-                                        <a href="#">And a submenu &hellip;</a>
+                                        <a>And a submenu &hellip;</a>
                                         <ul>
-                                            <li><a href="#">Lorem ipsum dolor</a></li>
-                                            <li><a href="#">Phasellus consequat</a></li>
-                                            <li><a href="#">Magna phasellus</a></li>
-                                            <li><a href="#">Etiam dolore nisl</a></li>
+                                            <li><a>Lorem ipsum dolor</a></li>
+                                            <li><a>Phasellus consequat</a></li>
+                                            <li><a>Magna phasellus</a></li>
+                                            <li><a>Etiam dolore nisl</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Veroeros feugiat</a></li> -->
+                                    <li><a>Veroeros feugiat</a></li> -->
                                 </ul>
                             </li>
                         </ul>
@@ -58,115 +58,126 @@
 					<div class="container">
 						<article id="main" class="special">
 							<header>
-								<h2><a href="#">Laminar Flow Analyses</a></h2>
+								<h2><a>Laminar Flow Analyses</a></h2>
 								<p>
 									Laminar pipe flow analyses modeled in ANSYS Fluent
 								</p>
 							</header>
-							<a href="#" class="image centered"><img src="images/laminarheader.jpg" alt="" /></a>
+							<a class="image centered"><img src="images/laminarheader.jpg" alt="" /></a>
 							
 							<p>
 								Using ANSYS Fluent, laminar flow within pipes of both a circular and square cross section were modeled. Below are explanations of the
 								modeling process and the results that were outputted. Due to the similarity of the modeling process for both the cross sections, the explanation
 								will consist of mostly the circular cross section with the results of both cross sections being shown after.
+								Assumptions used in these models include a Reynolds number of 100 (laminar), uniform velocity at the inlet, velocity changes only in the axial direction, 
+								and no-slip on the pipe walls.
 							</p>
 							<section>
 								<header>
 									<h3>Mesh Generation</h3>
-									
-									<a href="#" class="image centered"><img src="images/pipemesh.jpg" width="400" height="600" alt="" /></a>
 								</header>
+								<a class="image centered"><img src="images/pipemesh.jpg" width="400" height="600" alt="" /></a>
 								<p>
 									Before generating the pipe flow, the pipe geometry and meshing was done by creating half of the pipe as it
 									would be mirrored along the center axis. Since the pipe is 0.2 meters in diameter and 3 meters in length, a rectangle
-									was made with a width of 0.1 meter and 3 meters in length. Using this geometry, a uniform mesh of 100x10 would be used on the x-y face
-									as this is a 2D analysis of the flow. 
+									was made with a width of 0.1 meter and 3 meters in length. Using this geometry, a uniform mesh of 100 x 10 would be used on the x-y face
+									as this is a 2D analysis of the flow. This mesh would then be brought over to ANSYS Fluent.
 								</p>
 							</section>
 							<section>
 								<header>
-									<h3></h3>
-									
+									<h3>Setup & Results</h3>
 								</header>
 								<p>
-									<a href="#" class="image centered"><img src="images/fluentvelocity.jpg" alt="" /></a>
-									Eleifend auctor turpis magnis sed porta nisl pretium. Aenean suspendisse nulla eget sed etiam parturient
-									orci cursus nibh. Quisque eu nec neque felis laoreet diam morbi egestas. Dignissim cras rutrum consectetur
-									ut penatibus fermentum nibh erat malesuada varius.
+									Using ANSYS Fluent, the mesh was given boundary conditions by labeling each edge of the 2D mesh. This would allow Fluent to know which edges would
+									be a wall, an inlet, an outlet, and an axis. Additionally, reference values and fluid properties were also established such as density and viscosity. 
 								</p>
-							</section>
-							</section>
-							<section>
-								<header>
-									<h3>Results</h3>
-									<a href="#" class="image centered"><img src="images/fluentvelocity.jpg" alt="" /></a>
-									<a href="#" class="image centered"><img src="images/postvelocitygraph.jpg" alt="" /></a>
-								</header>
+								<p>After these conditions were applied, contours were made of the results outputted by Fluent.  </p>
+								<a class="image featured"><img src="images/fluentvelocityfull2.jpg" alt="" /></a>
 								<p>
-									Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis
-									feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit
-									ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada ante
-									egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.
+									From the results, we see that ANSYS calculated the velocity at the inlet as 1 m/s which matches the boundary condition that was set earlier.
+									At the outlet, the velocity of the fully devloped flow at the axis was found to be around 1.98 m/s which is also reasonable. Finally, there is
+									the layer of blue at the pipe wall signifying a close to 0 m/s velocity showing that the no-slip condition was met as well.
+								</p>
+								<a class="image featured"><img src="images/fluentpressurefull.jpg" alt="" /></a>
+								<p>
+									The gauge pressure seen at the inlet is around 5.55 Pa which is the highest in the model. This is accurate as fluid
+									moves from high pressure (inlet) to low pressure (outlet). The gauge pressure seen at the outlet is around .024 Pa which makes sense 
+									as it is open to the atmosphere
 								</p>
 								<header>
 									<h3>Error Analysis</h3>
 								</header>
-								<a href="#" class="image centered"><img src="images/fluentresiduals.jpg" alt="" /></a>
-								<a href="#" class="image centered"><img src="images/fluentcd.jpg" alt="" /></a>
+								</p>
+									Even though the results were fairly normal, sanity checks were done just in case. These checks included measuring
+									mass imbalances and using the drag coefficient results to check for convergence.
+								</p>
+								<div class="row">
+									<article class="col-6 col-12-mobile special">
+										<a class="image featured"><img src="images/fluentresiduals.jpg" alt="" /></a>
+										
+									</article>
+									<article class="col-6 col-12-mobile special">
+										<a class="image featured"><img src="images/fluentcd.jpg" alt="" /></a>
+										
+									</article>
+								</div>
 								<p>
-									Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis
-									feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit
-									ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada ante
-									egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.
+									Shown in the left graph are the aggregate imbalances of the axial (red) and radial (green) momentums. The exponential decrease of the
+									imbalances towards the set residual of 1e-6 show the decrease in linearization error. The right graph shows the change in the drag coefficient
+									through iterations and there are negligible differences after around 30 iterations.
+
+								</p> 
+								<a class="image featured"><img src="images/fluentmassimbalance.jpg" alt="" /></a>
+								<p>This contour shows the mass imbalances in each cell which tells us whether mass is being conserved properly. Due to the simplicity of this 2D model, 
+									it makes sense to have an extremely low mass imbalance which is good. At a value of 1.8261548e-12 kg/s, there is 
+									virtually a 0% imbalance compared to the total flux.
 								</p>
 							</section>
 							<section>
 								<header>
-									<h3>Augue euismod feugiat tempus</h3>
-									<a href="#" class="image centered"><img src="images/pipe2fluentvelocity.jpg" alt="" /></a>
-									<a href="#" class="image centered"><img src="images/pipe2fluentpressure.jpg" alt="" /></a>
-									<a href="#" class="image centered"><img src="images/p" alt="" /></a>
+									<h3>Vertical Square Channel</h3>
 								</header>
-								<p>
-									Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis
-									feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit
-									ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada ante
-									egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.
-								</p>
+									<p>
+										The vertical square pipe was modeled similarly to the with different values for the pipe dimension and viscosity. Since the channel flow is not circular, the
+										model used in this analysis would be in the Cartesian coordinate system instead of cylindrical. 
+									</p>
+									<div class="row">
+										<article class="col-2 col-12-mobile special">
+											<a class="image featured"><img src="images/pipe2fluentvelocity2.jpg" alt="" /></a>
+											
+										</article>
+										<article class="col-2 col-12-mobile special">
+											<a class="image featured"><img src="images/pipe2postvelocity.jpg" alt="" /></a>
+											
+										</article
+										><article class="col-2 col-12-mobile special">
+											<a class="image featured"><img src="images/pipe2fluentpressure.jpg" alt="" /></a>
+
+										</article>
+										
+										<article class="col-2 col-12-mobile special">
+											<a class="image featured"><img src="images/pipe2postpressure.jpg" alt="" /></a>
+
+										</article>
+										<article class="col-4 col-12-mobile special">
+											<header>
+												<h3><a>Results</a></h3>
+											</header>
+											<p>
+												The results of the vertical channel are not that far off from the horizontal pipe which is expected since they both had the same initial
+												velocity and boundary conditions. However, the slight differences in max velocity (2.0 m/s vs 1.49 m/s) and max pressure (5.55 Pa vs. 
+												1.77 Pa) can be attributed to the greater cross sectional area and a coarser mesh. Both meshes were 100 x 10 but due to the larger
+												geometry of the vertical pipe it becomes less accurate in this case.
+
+											</p>
+										</article>
+									</div>
+								
+								
 							</section>
 						</article>
-						<hr />
-						<div class="row">
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/fluentpressurein.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Impeller</a></h3>
-								</header>
-								<p>
-									Semi-open impeller designed using CATIA V5
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/fluentpressureout.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/fluentmassimbalance.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Magna laoreet et aliquam</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-						</div>
+
 					</div>
 
 				</div>

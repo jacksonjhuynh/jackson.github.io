@@ -17,7 +17,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="index.html" id="logo">Projects</a></h1>
+								<h1><a id="logo">Projects</a></h1>
 							</header>
 						</div>
 
@@ -26,7 +26,7 @@
 						<ul>
 							<li><a href="index.html">Home</a></li>
 							<li><a href="1.html">Lunar Sampling Device</a></li>
-							<li><a href="2.html">Formula SAE</a></li>								
+							<li><a href="2.html">Design Work</a></li>								
 							<li>
 								<a>Projects</a>
 								<ul>
@@ -63,76 +63,56 @@
 									A study of environmental fluid mechanics
 								</p>
 							</header>
-							<a href="#" class="image centered"><img src="images/plume.jpg" alt="" /></a>
+							<a  class="image centered"><img src="images/plume.jpg" alt="" /></a>
 							<p>
-								Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa
-								posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus
-								lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum
-								consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue
-								interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia
-								natoque aenean scelerisque vel lacinia mollis quam sodales congue.
+								Atmospheric dispersion modeling is the study of how air pollutants are spread through their surroundings by using mathematical simulations.
+								This project focuses primarily on particulates generated and dispersed from wildfires which is especially concerning here in California. Wildfire 
+								emissions release aerosols which can be harmful to the atmosphere particularly with long-range transport of these wildfire plumes (hundreds
+								of miles away from source). The MATLAB simulation created in this project utilizes the Gaussian plume/air dispersion equation (shown below) as the 
+								governing equation that models the wildfire.
+
+								<a  class="image centered"><img src="images/gaussian.jpg" alt="" /></a>
+
+								Simplifications such as an equal horizontal and vertical plume spread were used. The variable <b><i>s</i></b> in the assumption is the distance between the point source
+								and point of interest.
+
+								<a  class="image centered"><img src="images/assumption.jpg" alt="" /></a>
 							</p>
 							<section>
 								<header>
-									<h3>Ultrices tempor sagittis nisl</h3>
+									<h3>Process & Results</h3>
 								</header>
 								<p>
-									Nascetur volutpat nibh ullamcorper vivamus at purus. Cursus ultrices porttitor sollicitudin imperdiet
-									at pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis
-									feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit
-									fringilla consequat dis arcu. Pellentesque mus tempor vitae pretium sodales porttitor lacus. Phasellus
-									egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.
+									The MATLAB code developed allows for an <b><i>N</i></b> amount of wildfires to be modeled each with its own plume. The inputs that could
+									be plugged in by the user include the number of wildfires (<b><i>N</i></b>), the effective diffusion constant (<b><i>K</i></b>), and the 
+									wind velocity in the x-y plane (<b><i>U</i></b>). Aside from these, the simulation would randomize the variables and such as the point
+									source (wildfire) locations and the rate at which the wildfire emits particulates (<b><i>Q</i></b>). 
 								</p>
 								<p>
-									Eleifend auctor turpis magnis sed porta nisl pretium. Aenean suspendisse nulla eget sed etiam parturient
-									orci cursus nibh. Quisque eu nec neque felis laoreet diam morbi egestas. Dignissim cras rutrum consectetur
-									ut penatibus fermentum nibh erat malesuada varius.
+									The code itself creates an x-y plane mesh with the meshgrid function. These values would be necessary to solve for the distance between the 
+									point source and point of interest. With all the math solved, MATLAB's contourf function would create a concentration map that would be outputted 
+									from running the code. Shown below are the contour maps resulting from <b><i>N</i></b> = 10 and different inputs of wind velocity.
+									<div class="row">
+										<article class="col-6 col-12-mobile special">
+											<a  class="image featured"><img src="images/matlab.jpg" alt="" /></a>
+											<header>
+												<h3><a>U = [-1 1]</a></h3>
+											</header>
+
+										</article>
+										<article class="col-6 col-12-mobile special">
+											<a class="image featured"><img src="images/matlab2.jpg" alt="" /></a>
+											<header>
+												<h3><a>U = [-1 -1]</a></h3>
+											</header>
+
+										</article>
+									</div>
 								</p>
 							</section>
-							<section>
-								<header>
-									<h3>Augue euismod feugiat tempus</h3>
-								</header>
-								<p>
-									Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis
-									feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit
-									ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada ante
-									egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.
-								</p>
-							</section>
+							
 						</article>
-						<hr />
-						<div class="row">
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/matlab.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">I</a></h3>
-								</header>
-								<p>
-									asd
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Magna laoreet et aliquam</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-						</div>
+						
 					</div>
 
 				</div>
