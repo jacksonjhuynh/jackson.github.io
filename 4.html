@@ -31,20 +31,20 @@
                                 <a>Projects</a>
                                 <ul>
                                     <li><a href="3.html">Wildfire Dispersion Model</a></li>
-									<li><a href="4.html">Saturn V Flange Analysis</a></li>
-									<li><a href="5.html">Impeller Design</a></li>
-									<li><a href="6.html">Laminar Flow Analyses</a></li>
+									<li><a href="4.html">Saturn V Nozzle Flange</a></li>
+									<li><a href="5.html">GE 1.5XLE Wind Turbine</a></li>
+									<li><a href="6.html">Laminar Flow Study</a></li>
                                     <li><a href="7.html">Bike Crank Analysis</a></li>
                                     <!-- <li>
-                                        <a href="#">And a submenu &hellip;</a>
+                                        And a submenu &hellip;</a>
                                         <ul>
-                                            <li><a href="#">Lorem ipsum dolor</a></li>
-                                            <li><a href="#">Phasellus consequat</a></li>
-                                            <li><a href="#">Magna phasellus</a></li>
-                                            <li><a href="#">Etiam dolore nisl</a></li>
+                                            <li>Lorem ipsum dolor</a></li>
+                                            <li>Phasellus consequat</a></li>
+                                            <li>Magna phasellus</a></li>
+                                            <li>Etiam dolore nisl</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Veroeros feugiat</a></li> -->
+                                    <li>Veroeros feugiat</a></li> -->
                                 </ul>
                             </li>
                         </ul>
@@ -58,76 +58,211 @@
 					<div class="container">
 						<article id="main" class="special">
 							<header>
-								<h2><a href="#">Saturn V Nozzle Flange Analysis</a></h2>
+								<h2>Saturn V Bolted Nozzle Flange</h2>
 								<p>
-									ANSYS Mechanical study of the nozzle flange from the Saturn V
+									Finite-element model of the Saturn V nozzle flange assembly
 								</p>
 							</header>
-							<a href="#" class="image centered"><img src="images/nozzle.jpg" alt="" /></a>
+							<a  class="image centered"><img src="images/nozzle.jpg" alt="" /></a>
 							<p>
 								The Saturn V was a rocket used by NASA from 1967 to 1973 and it still holds the title as the most powerful
 								rocket ever operated. The first stage of the Saturn V consisted of five F-1 engines which each have a thrust to
 								weight ratio of 94:1 only beaten by the NK-33 and Merlin 1D rocket engines. In this project, the bolted flange joint of
-								the F-1 engine nozzle was analyzed using a finite element model in ANSYS. 
+								the F-1 engine nozzle was analyzed using a finite element model in ANSYS. The bolted flange joint connects the mid nozzle
+								to the lower nozzle. The pressure and thermal strain due to the exhaust gas will be taken into account when looking at
+								the deflection, strain, and the gap that may occur between the mid and lower flange.
 							</p>
 							<section>
 								<header>
-									<h3>Ultrices tempor sagittis nisl</h3>
+									<h3>Geometry & Load Steps</h3>
 								</header>
 								<p>
-									Nascetur volutpat nibh ullamcorper vivamus at purus. Cursus ultrices porttitor sollicitudin imperdiet
-									at pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis
-									feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit
-									fringilla consequat dis arcu. Pellentesque mus tempor vitae pretium sodales porttitor lacus. Phasellus
-									egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.
+									The F1 engine nozzle geometry was simplified to a cone in this analysis to reduce the complexity while still giving results on the same order of magnitude.
+									In addition, since the nozzle geometry is symmetric around the z axis, the model was also reduced to a 0.9° section of the full geometry. 
+									This reduces the computing power required since only half a bolt is modeled rather than 200 bolts. Finally, the materials assigned to the flange parts
+									are 300 series stainless steel for the nozzle walls and A-286 steel for the bolts and nuts.
 								</p>
 								<p>
-									Eleifend auctor turpis magnis sed porta nisl pretium. Aenean suspendisse nulla eget sed etiam parturient
-									orci cursus nibh. Quisque eu nec neque felis laoreet diam morbi egestas. Dignissim cras rutrum consectetur
-									ut penatibus fermentum nibh erat malesuada varius.
+									<div class="row">
+										<article class="col-3 col-12-mobile special">
+											<a href="images/nozzledesign.jpg" target = "_blank" class="image featured"><img src="images/nozzledesign.jpg" alt="" /></a>
+											<header>
+												<h3>View of full nozzle</h3>
+											</header>
+											
+										</article>
+										<article class="col-3 col-12-mobile special">
+											<a href="images/nozzlecloseup.jpg" target = "_blank" class="image featured"><img src="images/nozzlecloseup.jpg" alt="" /></a>
+											<header>
+												<h3>Closeup of flange joint</h3>
+											</header>
+										</article>
+										<article class="col-3 col-12-mobile special">
+											<a href="images2/flangesideview.jpg" target = "_blank" class="image featured"><img src="images2/flangesideview.jpg" alt="" /></a>
+											<header>
+												<h3>Section view through bolt</h3>
+											</header>
+										</article>
+										<article class="col-3 col-12-mobile special">
+											<a href="images2/flangesection.jpg" target = "_blank" class="image featured"><img src="images2/flangesection.jpg" alt="" /></a>
+											<header>
+												<h3>Reduced nozzle flange model</h3>
+											</header>
+										</article>
+									</div>
+								</p>
+								<p>
+									The load steps of this analysis begin with a bolt preload that comes from the tightening of the bolt which adds stress to the model. Secondly,
+									the pressure and forces that cause seperation of the two flanges. The final load step is where the thermal condition is applied to the model. These
+									load steps are applied by using tabular data on ANSYS. The bolt preload for the first load step was calculated as 4640 lbf or 50% of the breaking 
+									strength (9280 lbf). However, since we are using half a bolt the value has to be halved once again so the amount that was given to ANSYS was 2320 lbf.
+									The second load stage includes the pressure due to the propellant which varies in the Z axis. The pressure at the top of the nozzle was set as 47.72
+									psi and 12.17 psi at the bottom. Additionally, a regenerative force is applied that seperates the two flanges and this is set at 1000 lbf at each flange 
+									face. For the first two load steps the temperature will be set at 70°F and then raised to 700°F at the final load step. After all these load steps 
+									were applied, contacts were made between the parts with the flange faces being frictionless to allow them to slide against each other.
 								</p>
 							</section>
 							<section>
 								<header>
-									<h3>Augue euismod feugiat tempus</h3>
+									<h3>Results</h3>
 								</header>
 								<p>
-									Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis
-									feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit
-									ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada ante
-									egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.
+									<div class="row">
+										<article class="col-3 col-12-mobile special">
+											<a href="images2/flangemeshortho.jpg" target = "_blank" class="image featured"><img src="images2/flangedeformation.jpg" alt="" /></a>
+											<header>
+												<h3>Deformation - bolt preload</h3>
+											</header>
+											
+										</article>
+										<article class="col-3 col-12-mobile special">
+											<a href="images2/flangemeshskew.jpg" target = "_blank" class="image featured"><img src="images2/flangedeformation2.jpg" alt="" /></a>
+											<header>
+												<h3>Deformation - pressure</h3>
+											</header>
+										</article>
+										<article class="col-3 col-12-mobile special">
+											<a href="images2/flangesideview.jpg" target = "_blank" class="image featured"><img src="images2/flangedeformation3.jpg" alt="" /></a>
+											<header>
+												<h3>Deformation - thermal</h3>
+											</header>
+										</article>
+										<article class="col-3 col-12-mobile special">
+											<a href="images2/flangesection.jpg" target = "_blank" class="image featured"><img src="images2/flangedeformation3-1.jpg" alt="" /></a>
+											<header>
+												<h3>Deformation thermal - bottom nozzle</h3>
+											</header>
+										</article>
+									</div>
+								</p>
+								<p>
+									The deformations seen above are scaled by a degree of 10. Through the first two load steps there seems to be a very small amount of deformation on the
+									flange joint and nozzle wall. The first load step has a max deformation of 0.0014 inches and the second load step had a max deformation of 
+									0.0113 inches. However, during the thermal load step, the ends of the wall of the nozzle is affected significantly as it expands by about
+									1.1 inches. 
+								</p>
+								<p>
+									<div class="row">
+										<article class="col-3 col-12-mobile special">
+											<a href="images2/flangestress.jpg" target = "_blank" class="image featured"><img src="images2/flangestress.jpg" alt="" /></a>
+											<header>
+												<h3>von-Mises after all load steps</h3>
+											</header>
+											
+										</article>
+										<article class="col-3 col-12-mobile special">
+											<a href="images2/flangegap1.jpg" target = "_blank" class="image featured"><img src="images2/flangegap1.jpg" alt="" /></a>
+											<header>
+												<h3>Gapping - bolt preload</h3>
+											</header>
+										</article>
+										<article class="col-3 col-12-mobile special">
+											<a href="images2/flangegap2.jpg" target = "_blank" class="image featured"><img src="images2/flangegap2.jpg" alt="" /></a>
+											<header>
+												<h3>Gapping - pressure</h3>
+											</header>
+										</article>
+										<article class="col-3 col-12-mobile special">
+											<a href="images2/flangegap3.jpg" target = "_blank" class="image featured"><img src="images2/flangegap3.jpg" alt="" /></a>
+											<header>
+												<h3>Gapping - thermal</h3>
+											</header>
+										</article>
+									</div>
+								</p>
+								<p>
+									The stress seen in the middle of the bolt is around 60ksi when using the probe tool on the contour. This can be checked by hand calculations by 
+									dividing the bolt preload force (2320 lbf) with the bolt area (.038 in^2). This calculation gives us a value of 61 ksi which is about the same. Comparing 
+									this value to the properties of A-286 steel show that it is well under its capability of 140ksi. The same can be said for the 300 series stainless 
+									steel walls after finding the hoop stress which comes to be just under 7ksi. The capability of the 300 series stainless steel is found to be more than 15ksi.
+									Finally, the gapping between the surfaces where the flanges meet was another factor that had to be taken into account. The first load step shows no
+									significant gapping which makes sense since there is only the bolt preload. The second load step shows 0.005 inch gapping  at the area of interest which 
+									is the line along the sealing agent hole. The final load step shows no significant change as the area of interest still shows 0.005 inch gapping. If  
+									this gapping needed to be decreased the use of a thicker flange or even increasing the bolt preload would do so. 
+								</p>
+							</section>
+							<section>
+								<header>
+									<h3>Error Analysis</h3>
+								</header>
+								<p>
+									<div class="row">
+										<article class="col-6 col-12-mobile special">
+											<a href="images2/flangemeshortho.jpg" target = "_blank" class="image featured"><img src="images2/flangemeshortho.jpg" alt="" /></a>
+											<header>
+												<h3>Mesh orthogonal quality</h3>
+											</header>
+											
+										</article>
+										<article class="col-6 col-12-mobile special">
+											<a href="images2/flangemeshskew.jpg" target = "_blank" class="image featured"><img src="images2/flangemeshskew.jpg" alt="" /></a>
+											<header>
+												<h3>Mesh skewness</h3>
+											</header>
+										</article>
+									</div>
+								</p>
+								<p>
+									Average orthogonal quality and skewness of 0.89 and 0.22, respectively. A perfect mesh would have values of 1 for orthogonal quality and 0 for skewness
+									meaning that there is some inaccuracies in this model. Also, the mesh that was made could also have been finer but due to limitations with the 
+									academic version (32000 nodes/elements). The geometry of the mesh was also a first-order approximation as it was modeled as a cone while the actual
+									Saturn V nozzle had some more complexity. 
 								</p>
 							</section>
 						</article>
 						<hr />
+						<h2 style="text-align:center;">Overview</h2>
+						<p></p>
 						<div class="row">
 							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/flange.jpg" alt="" /></a>
+								<a href="images2/flange15mesh.jpg" target = "_blank" class="image featured"><img src="images2/flange15mesh.jpg" alt="" /></a>
 								<header>
-									<h3><a href="#">ANSYS FEA</a></h3>
+									<h3>Geometry</a></h3>
 								</header>
 								<p>
-									Modeled the effects of high pressure and high thermal strains that the F1 engines of the Saturn V would have faced.
+									An approximation of the Saturn V nozzle was modeled as a cone to get a rough answer that could be worked off of. Additionally, the model
+									was simplified using only a half bolt slice of the entire nozzle as it is mirrored all around.
 								</p>
 							</article>
 							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+								<a href="images2/flange15.jpg" target = "_blank" class="image featured"><img src="images2/flange15.jpg" alt="" /></a>
 								<header>
-									<h3><a href="#">Sed quis rhoncus placerat</a></h3>
+									<h3>ANSYS FEA</a></h3>
 								</header>
 								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
+									Values such as max deflection and stress were found through the use of ANSYS by setting up load stages including bolt preload, exhaust pressure,
+									and temperature changes.
 								</p>
 							</article>
 							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
+								<a href="images2/flangeerror.jpg" target = "_blank" class="image featured"><img src="images2/flangeerror.jpg" alt="" /></a>
 								<header>
-									<h3><a href="#">Magna laoreet et aliquam</a></h3>
+									<h3>Error Analysis</a></h3>
 								</header>
 								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
+									Due to simplications in the model, there was going to be some degree of error. However, due to the bulkness of the nozzle body it was a good enough
+									approximation. The mesh quality and coarseness are also areas where there are inaccuracies but when checking the results of ANSYS,
+									the values that were received were close to the hand calculations.
 								</p>
 							</article>
 						</div>
