@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Jackson Huynh - Bike Crank Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">Projects</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+							<li><a href="1.html">About Me</a></li>								
+							<li>
+								<a>Projects</a>
+								<ul>
+									<li><a href="2.html">Lunar Sampling Device</a></li>
+									<li><a href="3.html">Wildfire Dispersion Model</a></li>
+									<li><a href="4.html">Saturn V Nozzle Flange</a></li>
+									<li><a href="5.html">GE 1.5XLE Wind Turbine</a></li>
+									<li><a href="6.html">Centrifugal Pump Impeller</a></li>
+									<li><a href="7.html">Laminar Flow Study</a></li>
+									<li><a href="8.html">Bike Crank Analysis</a></li>
+                                    <!-- <li>
+                                        <a href="#">And a submenu &hellip;</a>
+                                        <ul>
+                                            <li><a href="#">Lorem ipsum dolor</a></li>
+                                            <li><a href="#">Phasellus consequat</a></li>
+                                            <li><a href="#">Magna phasellus</a></li>
+                                            <li><a href="#">Etiam dolore nisl</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Veroeros feugiat</a></li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<article id="main" class="special">
+							<header>
+								<h2>Bike Crank Analysis</h2>
+								<p>
+									Displacement, deformation, and stress analysis on a bike crank
+								</p>
+							</header>
+							<a  class="image centered"><img src="images2/bikecrank.jpg" alt="" /></a>
+							<p>
+								The bicycle crank is a component of a bicycle that connects the pedals to the bicycle frame. In this project, the bike crank was modeled
+								and analyzed using ANSYS. Results such as total deformation and stress distribution of the crank are shown below.
+							</p>
+							
+							
+							<section>
+								<header>
+									<h3>Mesh & Setup</h3>
+								</header>
+								<p>
+								<div class="row">
+									<article class="col-6 col-12-mobile special">
+										<a href="images2/bikecrankmesh.jpg" target = "_blank" class="image featured"><img src="images2/bikecrankmesh.jpg" alt="" /></a>
+										<header>
+											<h3>X-Y plane mesh</h3>
+										</header>
+										
+									</article>
+									<article class="col-3 col-12-mobile special">
+										<a href="images2/bikecrankmeshiso.jpg" target = "_blank" class="image featured"><img src="images2/bikecrankmeshiso.jpg" alt="" /></a>
+										<header>
+											<h3>Isometric mesh</h3>
+										</header>
+										
+									</article>
+									<article class="col-3 col-12-mobile special">
+										<a href="images2/bikecrankforces.jpg" target = "_blank" class="image featured"><img src="images2/bikecrankforces.jpg" alt="" /></a>
+										<header>
+											<h3>Isometric forces</h3>
+										</header>
+										
+									</article>
+								</div>
+								</p>
+								<p>
+									When generating the bike crank's mesh, focus was placed on the holes at each side of the crank with coarser meshing at the middle of the bar. The
+									model in this project is simplified by changing the variable force that a rider usually exerts on the crank to a static force of 100lbf. The material
+									used in this analysis is aluminum 6061-76 alloy. In addition to the 100lbf added to one side of the crank, a fixed boundary condition was set to the 
+									opposite. This fixed position sets up the crank to be modeled almost as a cantilever beam with the 100lbf side being expected to have the max
+									deformation once the solution is generated.
+								</p>
+								
+							</section>
+							<section>
+								<header>
+									<h3>Results</h3>
+								</header>
+								<p>
+								<div class="row">
+									<article class="col-4 col-12-mobile special">
+										<a href="images2/bikecrankdeformation.jpg" target = "_blank" class="image featured"><img src="images2/bikecrankdeformation.jpg" alt="" /></a>
+										<header>
+											<h3>Deformation</h3>
+										</header>
+										
+									</article>
+									<article class="col-4 col-12-mobile special">
+										<a href="images2/bikecranksigmax.jpg" target = "_blank" class="image featured"><img src="images2/bikecranksigmax.jpg" alt="" /></a>
+										<header>
+											<h3>X-axis normal stress</h3>
+										</header>
+										
+									</article>
+									<article class="col-4 col-12-mobile special">
+										<a href="images2/bikecranksigmay.jpg" target = "_blank" class="image featured"><img src="images2/bikecranksigmay.jpg" alt="" /></a>
+										<header>
+											<h3>Y-axis normal stress</h3>
+										</header>
+										
+									</article>
+								</div>
+								</p>
+								<p>
+									The max deformation seen in the bike crank was around 0.05 inches at the side with the applied force which is what was expected. Since the opposite side
+									was fixed it also makes sense that there would be close to no deflection there. For the X-axis normal stress we see that there is an equal stress at the
+									top and bottom of the midsection of around 13ksi. This is due to the bike crank being in tension at the bottom and compression at the top. When looking at
+									the Y-axis normal stress we see that the values are significantly lower especially in the middle where it is close to 0. This is due to the reaction force
+									of 100lbf being set in that axis.
+								</p>
+							</section>
+							<section>
+								<header>
+									<h3>Error Analysis</h3>
+								</header>
+								<p>
+								<div class="row">
+									<article class="col-6 col-12-mobile special">
+										<a href="images2/bikecrankmeshortho.jpg" target = "_blank" class="image featured"><img src="images2/bikecrankmeshortho.jpg" alt="" /></a>
+										<header>
+											<h3>Orthogonal quality</h3>
+										</header>
+										
+									</article>
+									<article class="col-6 col-12-mobile special">
+										<a href="images2/bikecrankmeshskew.jpg" target = "_blank" class="image featured"><img src="images2/bikecrankmeshskew.jpg" alt="" /></a>
+										<header>
+											<h3>Skewness</h3>
+										</header>
+										
+									</article>
+									
+								</div>
+								</p>
+								<p>
+									As shown above, the mesh quality was checked in order to make sure the output was accurate. The mesh's average orthogonal quality and skewness both had 
+									great values at 0.956 and 0.196, respectively. Perfect values for these would be an orthogonal quality of 1 and a skewness of 0 which were close in this
+									case. Aside from the mesh, there is error due to simplification of the model such as not accounting for gravity, using a static force approximation, And 
+									using a simple geometry. If this analysis had to be refined further for a precise answer to the deformation and stress values, these variables should be
+									accounted for.
+								</p>
+							</section>
+						</article>
+
+					</div>
+
+				</div>
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+
+							
+
+						</div>
+						
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Contact -->
+									<section class="contact">
+										<header>
+											<h3>Contact</h3>
+										</header>
+										<p>Email: jacksonjhuynh@gmail.com</p>
+										<ul class="icons">
+
+											<li><a href="https://www.linkedin.com/in/jacksonh/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+										</ul>
+									</section>
+
+
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

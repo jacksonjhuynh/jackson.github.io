@@ -2,53 +2,54 @@
 
 <html>
 	<head>
-		<title>Jackson Huynh - Laminar Flow Analyses</title>
+		<title>Jackson Huynh - Centrifugal Pump Impeller</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="no-sidebar is-preload">
+	<body class="right-sidebar is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header">
+			<div id="header">
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">Projects</a></h1>
-							</header>
-						</div>
+				<!-- Inner -->
+					<div class="inner">
+						<header>
+							<h1>Design Work</h1>
+						</header>
+					</div>
 
-					<!-- Nav -->
-                    <nav id="nav">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="1.html">Lunar Sampling Device</a></li>
-                            <li><a href="2.html">Design Work</a></li>								
-                            <li>
-                                <a>Projects</a>
-                                <ul>
-									<li><a href="3.html">Wildfire Dispersion Model</a></li>
-									<li><a href="4.html">Saturn V Nozzle Flange</a></li>
-									<li><a href="5.html">GE 1.5XLE Wind Turbine</a></li>
-									<li><a href="6.html">Laminar Flow Study</a></li>
-									<li><a href="7.html">Bike Crank Analysis</a></li>
-                                    <!-- <li>
-                                        <a>And a submenu &hellip;</a>
-                                        <ul>
-                                            <li><a>Lorem ipsum dolor</a></li>
-                                            <li><a>Phasellus consequat</a></li>
-                                            <li><a>Magna phasellus</a></li>
-                                            <li><a>Etiam dolore nisl</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a>Veroeros feugiat</a></li> -->
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="1.html">About Me</a></li>								
+				<li>
+					<a>Projects</a>
+					<ul>
+						<li><a href="2.html">Lunar Sampling Device</a></li>
+						<li><a href="3.html">Wildfire Dispersion Model</a></li>
+						<li><a href="4.html">Saturn V Nozzle Flange</a></li>
+						<li><a href="5.html">GE 1.5XLE Wind Turbine</a></li>
+						<li><a href="6.html">Centrifugal Pump Impeller</a></li>
+						<li><a href="7.html">Laminar Flow Study</a></li>
+						<li><a href="8.html">Bike Crank Analysis</a></li>
+						<!-- <li>
+							<a href="#">And a submenu &hellip;</a>
+							<ul>
+								<li><a href="#">Lorem ipsum dolor</a></li>
+								<li><a href="#">Phasellus consequat</a></li>
+								<li><a href="#">Magna phasellus</a></li>
+								<li><a href="#">Etiam dolore nisl</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Veroeros feugiat</a></li> -->
+					</ul>
+				</li>
+			</ul>
+		</nav>
 
 				</div>
 
@@ -58,129 +59,61 @@
 					<div class="container">
 						<article id="main" class="special">
 							<header>
-								<h2><a>Laminar Flow Study</a></h2>
+								<h2>Centrifugal Pump Impeller</h2>
 								<p>
-									Laminar pipe flow models using ANSYS Fluent
+									Semi-open centrifugal pump impeller design
 								</p>
 							</header>
-							<a class="image centered"><img src="images/laminarheader.jpg" alt="" /></a>
-							
+							<a href="#" class="image centered"><img src="images/impeller2.jpg" alt="" /></a>
 							<p>
-								Using ANSYS Fluent, laminar flow within pipes of both a circular and square cross section were modeled. Below are explanations of the
-								modeling process and the results that were outputted. Due to the similarity of the modeling process for both the cross sections, the explanation
-								will consist of mostly the circular cross section with the results of both cross sections being shown after.
-								Assumptions used in these models include a Reynolds number of 100 (laminar), uniform velocity at the inlet, velocity changes only in the axial direction, 
-								and no-slip on the pipe walls.
+								A centrifugal pump converts rotational energy into hydrodynamic energy through fluid flow. The centrifugal pump begins with rotational energy from a motor that
+								then moves fluid into the pump casing. The fluid then enters the impeller blades and is sent out tangentially and radially back outside the casing. At this
+								point, the fluid has gained velocity which is then converted into pressure energy/head. This design focuses on the impeller in which there are three different
+								types: open, semi-open, and closed. Open impellers feature free vanes and have no discs enclosing them, semi-open impellers have one side of the vanes covered by
+								a shroud, and closed impellers have vanes between two discs. For this design, a semi-open impeller design was modeled in CATIA V5.
 							</p>
 							<section>
 								<header>
-									<h3>Mesh Generation</h3>
-								</header>
-								<a class="image centered"><img src="images/pipemesh.jpg" width="400" height="600" alt="" /></a>
-								<p>
-									Before generating the pipe flow, the pipe geometry and meshing was done by creating half of the pipe as it
-									would be mirrored along the center axis. Since the pipe is 0.2 meters in diameter and 3 meters in length, a rectangle
-									was made with a width of 0.1 meter and 3 meters in length. Using this geometry, a uniform mesh of 100 x 10 would be used on the x-y face
-									as this is a 2D analysis of the flow. This mesh would then be brought over to ANSYS Fluent.
-								</p>
-							</section>
-							<section>
-								<header>
-									<h3>Setup & Results</h3>
+									<h3>Design Process</h3>
 								</header>
 								<p>
-									Using ANSYS Fluent, the mesh was given boundary conditions by labeling each edge of the 2D mesh. This would allow Fluent to know which edges would
-									be a wall, an inlet, an outlet, and an axis. Additionally, reference values and fluid properties were also established such as density and viscosity. 
-								</p>
-								<p>After these conditions were applied, contours were made of the results outputted by Fluent.  </p>
-								<a class="image featured"><img src="images2/fluentvelocityfull2.jpg" alt="" /></a>
-								<p>
-									From the results, we see that ANSYS calculated the velocity at the inlet as 1 m/s which matches the boundary condition that was set earlier.
-									At the outlet, the velocity of the fully devloped flow at the axis was found to be around 1.98 m/s which is also reasonable. Finally, there is
-									the layer of blue at the pipe wall signifying a close to 0 m/s velocity showing that the no-slip condition was met as well.
-								</p>
-								<a class="image featured"><img src="images2/fluentpressurefull.jpg" alt="" /></a>
-								<p>
-									The gauge pressure seen at the inlet is around 5.55 Pa which is the highest in the model. This is accurate as fluid
-									moves from high pressure (inlet) to low pressure (outlet). The gauge pressure seen at the outlet is around .024 Pa which makes sense 
-									as it is open to the atmosphere
-								</p>
-								<header>
-									<h3>Error Analysis</h3>
-								</header>
-								</p>
-									Even though the results were fairly normal, sanity checks were done just in case. These checks included measuring
-									mass imbalances and using the drag coefficient results to check for convergence.
-								</p>
 								<div class="row">
-									<article class="col-6 col-12-mobile special">
-										<a class="image featured"><img src="images2/fluentresiduals.jpg" alt="" /></a>
-										
+									<article class="col-3 col-12-mobile special">
+										<a href="images2/impellershaft.jpg" target = "_blank" class="image featured"><img src="images2/impellershaft.jpg" alt="" /></a>
+										<header>
+											<h3>Shaft dimensions</h3>
+										</header>
 									</article>
-									<article class="col-6 col-12-mobile special">
-										<a class="image featured"><img src="images2/fluentcd.jpg" alt="" /></a>
-										
+									<article class="col-3 col-12-mobile special">
+										<a href="images2/impellershaft2.jpg" target = "_blank" class="image featured"><img src="images2/impellershaft2.jpg" alt="" /></a>
+										<header>
+											<h3>Shaft after rotation</h3>
+										</header>
+									</article>
+									<article class="col-3 col-12-mobile special">
+										<a href="images2/impellervane.jpg" target = "_blank" class="image featured"><img src="images2/impellervane.jpg" alt="" /></a>
+										<header>
+											<h3>Vane surface</h3>
+										</header>
+									</article>
+									<article class="col-3 col-12-mobile special">
+										<a href="images2/impellervane2.jpg" target = "_blank" class="image featured"><img src="images2/impellervane2.jpg" alt="" /></a>
+										<header>
+											<h3><a>Vane circular pattern</a></h3>
+										</header>
 									</article>
 								</div>
-								<p>
-									Shown in the left graph are the aggregate imbalances of the axial (red) and radial (green) momentums. The exponential decrease of the
-									imbalances towards the set residual of 1e-6 show the decrease in linearization error. The right graph shows the change in the drag coefficient
-									through iterations and there are negligible differences after around 30 iterations.
-
-								</p> 
-								<a class="image featured"><img src="images2/fluentmassimbalance.jpg" alt="" /></a>
-								<p>This contour shows the mass imbalances in each cell which tells us whether mass is being conserved properly. Due to the simplicity of this 2D model, 
-									it makes sense to have an extremely low mass imbalance which is good. At a value of 1.8261548e-12 kg/s, there is 
-									virtually a 0% imbalance compared to the total flux.
 								</p>
-							</section>
-							<section>
-								<header>
-									<h3>Vertical Square Channel</h3>
-								</header>
-									<p>
-										The vertical square pipe was modeled similarly to the with different values for the pipe dimension and viscosity. Since the channel flow is not circular, the
-										model used in this analysis would be in the Cartesian coordinate system instead of cylindrical. 
-									</p>
-									<div class="row">
-										<article class="col-2 col-12-mobile special">
-											<a class="image featured"><img src="images/pipe2fluentvelocity2.jpg" alt="" /></a>
-											
-										</article>
-										<article class="col-2 col-12-mobile special">
-											<a class="image featured"><img src="images/pipe2postvelocity.jpg" alt="" /></a>
-											
-										</article
-										><article class="col-2 col-12-mobile special">
-											<a class="image featured"><img src="images/pipe2fluentpressure.jpg" alt="" /></a>
-
-										</article>
-										
-										<article class="col-2 col-12-mobile special">
-											<a class="image featured"><img src="images/pipe2postpressure.jpg" alt="" /></a>
-
-										</article>
-										<article class="col-4 col-12-mobile special">
-											<header>
-												<h3><a>Results</a></h3>
-											</header>
-											<p>
-												The results of the vertical channel are not that far off from the horizontal pipe which is expected since they both had the same initial
-												velocity and boundary conditions. However, the slight differences in max velocity (2.0 m/s vs 1.49 m/s) and max pressure (5.55 Pa vs. 
-												1.77 Pa) can be attributed to the greater cross sectional area and a coarser mesh. Both meshes were 100 x 10 but due to the larger
-												geometry of the vertical pipe it becomes less accurate in this case.
-
-											</p>
-										</article>
-									</div>
-									
+								<p>
+									The first thing that was sketched for this impeller was the shaft or the eye of the impeller. This would serve as the base which the vanes would
+									be placed around. The sketch was done in a way that it would be rotated around the z-axis. Afterwards, a vane was modeled by using 
+									multi-section surfacing and using four splines drawn in the x-y and z-x planes. Then, a circular pattern was made to duplicate the vane around
+									the z-axis. Finally, excess material was cut out using the groove tool to complete the model.
+								</p>
 								
-								
-							</section>
 						</article>
-
+						</div>
 					</div>
-
 				</div>
 
 			<!-- Footer -->
@@ -202,12 +135,9 @@
 										</header>
 										<p>Email: jacksonjhuynh@gmail.com</p>
 										<ul class="icons">
-
 											<li><a href="https://www.linkedin.com/in/jacksonh/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
 										</ul>
 									</section>
-
-
 
 							</div>
 
